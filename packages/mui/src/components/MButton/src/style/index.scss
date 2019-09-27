@@ -1,0 +1,48 @@
+@import '../../../styles/index.scss';
+@import './variables.scss';
+
+$btn-prefix: '#{$prefix}-btn';
+
+.#{$btn-prefix} {
+    align-items: center;
+    border-radius: $btn-border-radius;
+    display: inline-flex;
+    flex: 0 0 auto;
+    font-weight: $btn-font-weight;
+    letter-spacing: $btn-letter-spacing;
+    justify-content: center;
+    max-width: 100%;
+    outline: 0;
+    position: relative;
+    text-decoration: none;
+    text-indent: $btn-letter-spacing;
+    text-transform: uppercase;
+    transition-duration: $btn-transition-duration;
+    transition-property: box-shadow, transform, opacity;
+    transition-timing-function: $btn-transition-fn;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        border-radius: inherit;
+        color: inherit;
+        opacity: 0;
+        pointer-events: none;
+        transition: $btn-transition
+    }
+
+    @each $name, $size in $btn-sizes {
+        &.#{$prefix}-size--#{$name} {
+            height: #{$size}px;
+            padding: 0 #{$size / 2.25}px
+        }
+    }
+}
+

@@ -1,0 +1,4 @@
+{
+	"MButton": "./src/components/MButton/index.js",
+	"MInput": "./src/components/MInput/index.js"
+}

@@ -1,0 +1,53 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "node scripts/warn-npm-install.js && yarn lerna run test && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "dev": "node scripts/dev.js",
+    "build": "node scripts/build.js",
+    "test": "node scripts/test.js",
+    "lint": "lerna run lint --parallel",
+    "commit": "git-cz"
+  },
+  "engines": {
+    "node": ">= 10",
+    "yarn": ">= 1.12.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
+    "commitizen": "^4.0.3",
+    "cross-spawn": "^7.0.0",
+    "cz-conventional-changelog": "^3.0.2",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.17.0",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-vue": "^5.2.3",
+    "husky": "^3.0.5",
+    "lerna": "^3.16.4",
+    "lint-staged": "^9.4.0",
+    "vue-eslint-parser": "^6.0.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}
