@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`compile should work 1`] = `
+"(function() {
+    var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    \\"div\\",
+    { attrs: { id: \\"app\\" } },
+    [_c(\\"m-button\\", { attrs: { large: \\"\\" } })],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+    
+const demoComponent = {
+  data () {
+    return {}
+  }
+}
+
+    return {
+      render,
+      staticRenderFns,
+      ...demoComponent
+    }
+  })()"
+`;

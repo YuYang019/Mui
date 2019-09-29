@@ -1,4 +1,5 @@
 **/dist/*
 **/fixtures/*
 **/coverage/*
-packages/mui/lib/*
+**/fragments/*
+**/mui/lib/*

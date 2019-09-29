@@ -6,12 +6,12 @@
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "node scripts/warn-npm-install.js && yarn lerna run test && lint-staged"
+      "pre-commit": "node scripts/warn-npm-install.js && yarn lerna run test && npm run lint"
     }
   },
   "lint-staged": {
     "*.{js,vue}": [
-      "eslint --fix",
+      "npm run lint",
       "git add"
     ]
   },

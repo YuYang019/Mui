@@ -1,13 +1,11 @@
 <template>
-  <div class="home">
-    <m-button />
+  <div class="input">
     <m-input />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'home',
   components: {
   }
 }
