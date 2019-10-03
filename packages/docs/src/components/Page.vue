@@ -13,6 +13,7 @@ export default {
 <style lang="scss">
 .page {
     text-align: left;
+    width: 100%;
     > h1:nth-child(1) {
       margin-top: 0;
     }

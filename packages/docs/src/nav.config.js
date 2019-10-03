@@ -11,11 +11,11 @@ const nav = [
     name: 'components',
     children: [
       {
-        name: 'Button',
+        name: 'button',
         path: '/button'
       },
       {
-        name: 'Input',
+        name: 'input',
         path: '/input'
       }
     ]

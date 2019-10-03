@@ -1,9 +1,9 @@
 export default {
-  home: 'home',
-  language: 'language',
-  install: 'install',
-  intro: 'intro',
-  components: 'components',
-  Button: 'Button',
-  Input: 'Input'
+  home: 'Home',
+  language: 'Language',
+  install: 'Install',
+  intro: 'Intro',
+  components: 'Components',
+  button: 'Button',
+  input: 'Input'
 }

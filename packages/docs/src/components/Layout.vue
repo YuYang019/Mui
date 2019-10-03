@@ -5,6 +5,7 @@
       <side-bar />
       <div class="content">
         <slot name="content"></slot>
+        <m-footer></m-footer>
       </div>
     </div>
   </div>
@@ -12,11 +13,12 @@
 
 <script>
 import HeadNav from './HeadNav'
+import MFooter from './MFooter'
 import SideBar from './SideBar'
 
 export default {
   components: {
-    HeadNav, SideBar
+    HeadNav, SideBar, MFooter
   }
 
 }
@@ -27,7 +29,7 @@ export default {
     .container {
       display: flex;
       .content {
-        padding: 30px;
+        padding: 30px 60px 80px;
         width: 100%;
         position: relative;
       }

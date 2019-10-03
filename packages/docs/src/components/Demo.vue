@@ -76,7 +76,7 @@ export default {
 
 <style lang="scss">
   .demo {
-    width: 640px;
+    width: 100%;
     margin-bottom: 16px;
     border-radius: 5px;
     box-sizing: border-box;
