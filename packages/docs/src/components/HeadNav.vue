@@ -2,7 +2,7 @@
   <div class="nav">
     <div class="title">Mui</div>
     <ul class="links">
-      <li>{{ $t("home") }}</li>
+      <li>{{ $t('home') }}</li>
       <select :value="locale" @change="handleChange">
         <option value="zh-CN">zh-CN</option>
         <option value="en-US">en-US</option>

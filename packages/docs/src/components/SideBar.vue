@@ -2,17 +2,17 @@
   <div class="side-bar" v-if="nav">
     <template v-for="item in nav">
       <div v-if="item.children" class="group" :key="item.name">
-        <p>{{ item.label }}</p>
+        <p>{{ $t(item.name) }}</p>
         <template v-for="child in item.children">
           <p :key="child.name">
             <router-link :to="`/${locale}/${item.name}${child.path}`">
-              {{ child.label }}
+              {{ $t(child.name) }}
             </router-link>
           </p>
         </template>
       </div>
       <p v-else :key="item.name">
-        <router-link :to="`/${locale}${item.path}`">{{ item.label }}</router-link>
+        <router-link :to="`/${locale}${item.path}`">{{ $t(item.name) }}</router-link>
       </p>
 
     </template>
@@ -21,11 +21,12 @@
 
 <script>
 import { mapState } from 'vuex'
+import nav from '@/nav.config.js'
 
 export default {
   data () {
     return {
-      nav: null
+      nav: nav
     }
   },
   computed: {
@@ -37,16 +38,11 @@ export default {
     locale: {
       immediate: true,
       handler (val, oldVal) {
-        console.log(this.$route)
         if (oldVal) {
           const to = this.$route.path.replace(oldVal, val)
           console.log(to)
           this.$router.replace(to)
         }
-        import('@/docs/' + val + '/menu.js').then(res => {
-          console.log(res.default)
-          this.nav = res.default
-        })
       }
     }
   }
