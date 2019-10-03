@@ -35,6 +35,7 @@ export default {
         background: #282c34;
     }
     pre[class*='language-'] {
+        margin: 16px 0;
         padding: 1.25em 1.5em;
         border-radius: 5px;
         code {

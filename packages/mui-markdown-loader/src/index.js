@@ -10,12 +10,14 @@ function wrap (code, lang) {
 const md = new Md({
   highlight (str, lang) {
     lang = lang.toLowerCase()
-    if (!prism.languages[lang]) {
+    if (lang && !prism.languages[lang]) {
       try {
         loadLanguages([lang])
       } catch (e) {
         lang = 'markup'
       }
+    } else {
+      lang = 'markup'
     }
     const code = prism.highlight(str, prism.languages[lang], lang)
     return wrap(code, lang)
@@ -48,6 +50,7 @@ function plugin (md) {
         </demo>
       `
     } else {
+      console.log()
       return fence(tokens, idx, options, env, renderer)
     }
   }

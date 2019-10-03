@@ -28,6 +28,8 @@ export default {
       display: flex;
       .content {
         padding: 30px;
+        width: 100%;
+        position: relative;
       }
     }
   }

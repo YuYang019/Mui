@@ -13,3 +13,9 @@ selectable value：`x-small/small/default(默认)/large/x-large`
     <m-button />
 </template>
 ```
+
+```demo
+<template>
+    <m-button />
+</template>
+```

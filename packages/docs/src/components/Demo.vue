@@ -81,12 +81,13 @@ export default {
     border-radius: 5px;
     box-sizing: border-box;
     background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.12);
+    border: 1px solid #eee;
     text-align: left;
     transition: all .3s linear;
     .playground {
       text-align: center;
       padding: 30px;
+      border-top: 1px solid #eee;
     }
     .code-wrapper {
       position: relative;
@@ -110,7 +111,8 @@ export default {
         transition: all .3s ease;
       }
       pre {
-        margin: 0;
+        background: #f9f9f9 !important;
+        margin: 0 !important;
         border-radius: 0 !important;
       }
     }
@@ -123,11 +125,12 @@ export default {
       font-size: 24px;
       padding: 0 20px;
       color: rgba(0, 0, 0, 0.54);
+      border-bottom: 1px solid #eee;
       > span {
         cursor: pointer;
       }
       &.no-border {
-        border-top: 0;
+        border-bottom: 0;
       }
     }
   }
