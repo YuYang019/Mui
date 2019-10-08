@@ -60,9 +60,9 @@ module.exports = {
     ]
   },
   plugins,
-  // optimization: {
-  //   minimize: false
-  // },
+  optimization: {
+    minimize: false
+  },
   performance: {
     hints: false
   },

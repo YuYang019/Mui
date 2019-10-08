@@ -13,7 +13,9 @@ module.exports = merge(baseConfig, {
     filename: 'mui.umd.js',
     chunkFilename: '[id].js',
     library: 'Mui',
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
+    // See https://github.com/webpack/webpack/issues/6522
+    globalObject: 'typeof self !== \'undefined\' ? self : this'
   },
   externals: {
     vue: {

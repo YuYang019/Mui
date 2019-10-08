@@ -1,5 +1,5 @@
 {
-  "name": "mui",
+  "name": "@akihi/mui",
   "version": "0.1.0",
   "main": "lib/mui.umd.js",
   "scripts": {
@@ -14,10 +14,10 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
-    "jest": "^24.9.0",
     "vue": "^2.6.10"
   },
   "devDependencies": {
+    "jest": "^24.9.0",
     "@babel/core": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
     "@vue/test-utils": "^1.0.0-beta.29",
