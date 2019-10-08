@@ -17,7 +17,6 @@
     "vue": "^2.6.10"
   },
   "devDependencies": {
-    "jest": "^24.9.0",
     "@babel/core": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
     "@vue/test-utils": "^1.0.0-beta.29",
@@ -30,6 +29,7 @@
     "eslint-plugin-jest": "^22.17.0",
     "eslint-plugin-vue": "^5.2.3",
     "friendly-errors-webpack-plugin": "^1.7.0",
+    "jest": "^24.9.0",
     "jest-serializer-vue": "^2.0.2",
     "jest-transform-stub": "^2.0.0",
     "mini-css-extract-plugin": "^0.8.0",
