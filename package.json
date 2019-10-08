@@ -9,12 +9,6 @@
       "pre-commit": "node scripts/warn-npm-install.js && yarn lerna run test && npm run lint"
     }
   },
-  "lint-staged": {
-    "*.{js,vue}": [
-      "npm run lint",
-      "git add"
-    ]
-  },
   "scripts": {
     "dev": "node scripts/dev.js",
     "build": "node scripts/build.js",
