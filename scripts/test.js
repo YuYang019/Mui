@@ -5,5 +5,5 @@ console.log(target)
 if (!target) {
   spawn('yarn', ['lerna', 'run', 'test', '--stream'], { stdio: 'inherit' })
 } else {
-  spawn('yarn', ['lerna', 'run', 'test', '--scope', 'mui', '--stream'], { stdio: 'inherit' })
+  spawn('yarn', ['lerna', 'run', 'test', '--scope', target, '--stream'], { stdio: 'inherit' })
 }

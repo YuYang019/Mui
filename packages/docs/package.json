@@ -31,5 +31,6 @@
     "prismjs": "^1.17.1",
     "sass-loader": "^8.0.0",
     "vue-template-compiler": "^2.6.10"
-  }
+  },
+  "gitHead": "914d63cd0ca8e60c72cd80e6f72cdb20899b3b46"
 }

@@ -2,7 +2,7 @@ import 'prismjs/themes/prism-tomorrow.css'
 
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
-import Mui from 'mui'
+import Mui from '@akihi/mui'
 
 import store from './store'
 import App from './App.vue'
@@ -24,9 +24,6 @@ const messages = {
 
 console.log(Mui)
 
-// console.log(Mui)
-// Vue.use(Mui)
-
 if (process.env.NODE_ENV === 'development') {
   import('../../mui/src/index').then(Mui => {
     Vue.use(Mui.default)
@@ -45,7 +42,7 @@ if (process.env.NODE_ENV === 'development') {
     }).$mount('#app')
   })
 } else {
-  import('mui').then(Mui => {
+  import('@akihi/mui').then(Mui => {
     Vue.use(Mui.default)
     Vue.use(VueI18n)
 
