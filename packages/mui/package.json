@@ -1,6 +1,6 @@
 {
   "name": "@akihi/mui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "lib/mui.umd.js",
   "scripts": {
     "build": "sh build/build.sh",
