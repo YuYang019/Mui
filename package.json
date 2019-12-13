@@ -15,6 +15,7 @@
     "test": "node scripts/test.js",
     "lint": "lerna run lint --parallel",
     "commit": "git-cz",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 2 && git add CHANGELOG.md",
     "deploy": "lerna publish --conventional-commits"
   },
   "engines": {
@@ -23,10 +24,12 @@
   },
   "devDependencies": {
     "commitizen": "^4.0.3",
+    "conventional-changelog-cli": "^2.0.28",
     "cross-spawn": "^7.0.0",
     "cz-conventional-changelog": "^3.0.2",
     "husky": "^3.0.5",
-    "lerna": "^3.16.4"
+    "lerna": "^3.16.4",
+    "standard-version": "^7.0.1"
   },
   "config": {
     "commitizen": {
