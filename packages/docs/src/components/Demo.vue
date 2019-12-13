@@ -1,7 +1,10 @@
 <template>
   <div class="demo">
     <div class="actions" :class="{'no-border': !show}">
-      <span @click="handleExpand">{{ expandText }}</span>
+      <span @click="handleExpand">
+        <m-icon v-if="show" name="menuclassic" />
+        <m-icon v-else name="menushort" />
+      </span>
     </div>
     <div class="raw-code">
       <div class="code-wrapper" ref="codeWrapper" :class="{'expanded': show}">
@@ -20,6 +23,7 @@
 <script>
 export default {
   name: 'demo',
+
   props: {
     source: String,
     html: String
@@ -34,9 +38,6 @@ export default {
   },
 
   computed: {
-    expandText () {
-      return this.show ? '‹-›' : '‹ ›'
-    },
     copyText () {
       return this.copy ? 'Copied!' : 'Copy'
     }
@@ -88,6 +89,21 @@ export default {
       text-align: center;
       padding: 30px;
       border-top: 1px solid #eee;
+      .wrapper {
+        > div {
+          display: inline-block;
+          margin: 0 15px;
+        }
+        .m-button {
+          margin: 0 15px;
+        }
+      }
+      .split {
+        display: block;
+        height: 1px;
+        width: 100%;
+        margin: 8px 0;
+      }
     }
     .code-wrapper {
       position: relative;
@@ -105,7 +121,7 @@ export default {
         right: 20px;
         top: 20px;
         font-weight: bold;
-        color: #efefef;
+        color: rgba(0, 0, 0, 0.54);
         cursor: pointer;
         opacity: 0;
         transition: all .3s ease;
@@ -122,7 +138,7 @@ export default {
       text-align: right;
       height: 48px;
       line-height: 48px;
-      font-size: 24px;
+      font-size: 16px;
       padding: 0 20px;
       color: rgba(0, 0, 0, 0.54);
       border-bottom: 1px solid #eee;

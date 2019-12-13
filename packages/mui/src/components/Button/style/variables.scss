@@ -1,0 +1,51 @@
+// $btn-active-opacity: 0.18 !default;
+// $btn-border-radius: 4px !default;
+// $btn-focus-opacity: 0.24 !default;
+// $btn-font-weight: map-get($font-weights, 'medium') !default;
+// $btn-hover-opacity: 0.08 !default;
+// $btn-letter-spacing: .0892857143em !default;
+// $btn-icon-font-size: 18px !default;
+// $btn-icon-padding: 12px !default;
+// $btn-outline-border-width: thin !default;
+// $btn-rounded-border-radius: 28px !default;
+$btn-sizes: (
+  'x-small': 20,
+  'small': 28,
+  'default': 36,
+  'large': 44,
+  'x-large': 52
+) !default;
+
+$btn-font-sizes: (
+  'x-small': 12px,
+  'small': 13px,
+  'default': 14px,
+  'large': 15px,
+  'x-large': 16px
+) !default;
+
+$btn-color: (
+  'primary': $color-primary,
+  'success': $color-success,
+  'error': $color-danger,
+  'warning': $color-warning, 
+  'info': $color-muted
+) !default;
+// $fab-sizes: (
+//   'x-small': 32,
+//   'small': 40,
+//   'default': 56,
+//   'large': 64,
+//   'x-large': 72
+// ) !default;
+// $fab-icon-sizes: (
+//   'x-small': 18,
+//   'small': 24,
+//   'default': 24,
+//   'large': 28,
+//   'x-large': 32
+// ) !default;
+$btn-transition-duration: 0.05s !default;
+$btn-transition-fn: map-get($transition, 'ease-in-out') !default;
+// $btn-transition: opacity 0.2s map-get($transition, 'ease-in-out') !default;
+

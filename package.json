@@ -14,7 +14,8 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "lint": "lerna run lint --parallel",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "deploy": "lerna publish --conventional-commits"
   },
   "engines": {
     "node": ">= 10",
@@ -31,5 +32,6 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
-  }
+  },
+  "version": "0.1.2"
 }

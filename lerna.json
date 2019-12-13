@@ -12,7 +12,7 @@
       "push": true
     }
   },
-  "version": "0.1.1",
+  "version": "independent",
   "npmClient": "yarn",
   "useWorkspaces": true
 }

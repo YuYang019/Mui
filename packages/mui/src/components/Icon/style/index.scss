@@ -1,0 +1,8 @@
+@import '../../../styles/index.scss';
+@import './fonts/iconfont.scss';
+@import './variables.scss';
+
+$btn-prefix: '#{$prefix}-icon';
+
+.#{$btn-prefix} {}
+

@@ -1,5 +1,6 @@
-import MButton from './components/MButton'
-import MInput from './components/MInput'
+import Button from './components/Button'
+import Input from './components/Input'
+import Icon from './components/Icon'
 
 console.warn(
   'You are using a whole package of mui, ' +
@@ -7,11 +8,16 @@ console.warn(
 )
 
 const components = [
-  MButton,
-  MInput
+  // Button,
+  Input,
+  Icon
 ]
 
-const install = (Vue) => {
+const install = (Vue, options = {}) => {
+  Vue.prototype.$MUI = {
+    size: options.size || ''
+  }
+
   components.forEach(component => {
     console.log(component.name, component)
     Vue.component(component.name, component)
@@ -27,6 +33,7 @@ export default {
 }
 
 export {
-  MButton,
-  MInput
+  Button,
+  Input,
+  Icon
 }

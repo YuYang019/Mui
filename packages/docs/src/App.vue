@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Layout from '@/components/Layout'
+import Layout from '@docs/components/Layout'
 
 export default {
   components: {
@@ -25,6 +25,6 @@ export default {
 }
 body {
   color: rgba(0, 0, 0, 0.87);
-  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+  font-family: 'ZCOOL XiaoWei',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol' !important;
 }
 </style>

@@ -1,0 +1,30 @@
+// $input-active-opacity: 0.18 !default;
+// $input-border-radius: 4px !default;
+// $input-focus-opacity: 0.24 !default;
+// $input-font-weight: map-get($font-weights, 'medium') !default;
+// $input-hover-opacity: 0.08 !default;
+// $input-letter-spacing: .0892857143em !default;
+// $input-icon-font-size: 18px !default;
+// $input-icon-padding: 12px !default;
+// $input-outline-border-width: thin !default;
+// $input-rounded-border-radius: 28px !default;
+$input-sizes: (
+  'x-small': 24,
+  'small': 28,
+  'default': 32,
+  'large': 36,
+  'x-large': 40,
+) !default;
+
+$input-font-sizes: (
+  'x-small': 12px,
+  'small': 13px,
+  'default': 14px,
+  'large': 15px,
+  'x-large': 16px
+) !default;
+
+$input-transition-duration: 0.1s !default;
+$input-transition-fn: map-get($transition, 'fast-out-slow-in') !default;
+// $input-transition: opacity 0.2s map-get($transition, 'ease-in-out') !default;
+

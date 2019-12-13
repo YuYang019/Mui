@@ -28,7 +28,7 @@ const plugins = [
 
 module.exports = {
   resolve: {
-    extensions: ['.js', '.json', '.vue']
+    extensions: ['.js', '.json', '.vue'],
   },
   module: {
     rules: [

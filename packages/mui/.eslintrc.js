@@ -11,7 +11,8 @@ module.exports = {
     ],
     extends: [
       'plugin:jest/recommended',
-      'plugin:vue/recommended'
+      'plugin:vue/recommended',
+      'standard',
     ],
     rules: {
       'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',

@@ -1,13 +1,14 @@
 {
   "name": "@akihi/mui",
   "version": "0.1.1",
+  "private": true,
   "main": "lib/mui.umd.js",
   "scripts": {
     "build": "sh build/build.sh",
     "build:umd": "webpack --config build/webpack.umd.config.js",
     "build:component": "webpack --config build/webpack.component.config.js",
     "test": "cross-env NODE_ENV=test jest",
-    "lint": "eslint **/src/**/*.{js,vue} --fix"
+    "lint": "eslint **/src/**/*.js --fix"
   },
   "peerDependencies": {
     "vue": "^2.6.10"
@@ -48,5 +49,5 @@
     "webpack-merge": "^4.2.2",
     "webpack-node-externals": "^1.7.2"
   },
-  "gitHead": "914d63cd0ca8e60c72cd80e6f72cdb20899b3b46"
+  "gitHead": "08498ad154d52d9cf12efec1270bebf06c77d924"
 }

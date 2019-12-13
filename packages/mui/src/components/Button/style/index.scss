@@ -1,0 +1,115 @@
+@import '../../../styles/index.scss';
+@import './variables.scss';
+
+$btn-prefix: '#{$prefix}-button';
+
+.#{$btn-prefix} {
+    display: inline-block;
+    font-family: $body-font-family;
+    outline: 0;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    border: $border-default;
+    background-color: $color-default;
+    cursor: pointer;
+    white-space: nowrap;
+    
+    transition-duration: $btn-transition-duration;
+    transition-timing-function: $btn-transition-fn;
+    transition-property: all;
+
+    // // border-radius: $btn-border-radius;
+    display: inline-flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    // font-weight: $btn-font-weight;
+    // letter-spacing: $btn-letter-spacing;
+    // max-width: 100%;
+    // outline: 0;
+    // position: relative;
+    // text-decoration: none;
+    // text-indent: $btn-letter-spacing;
+    // text-transform: uppercase;
+    // transition-timing-function: $btn-transition-fn;
+    // user-select: none;
+    // white-space: nowrap;
+
+    // &:before {
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     right: 0;
+    //     left: 0;
+    //     bottom: 0;
+    //     border-radius: inherit;
+    //     color: inherit;
+    //     opacity: 0;
+    //     pointer-events: none;
+    //     transition: $btn-transition
+    // }
+    [class*=#{$prefix}-icon] + span {
+        margin-left: 8px;
+    }
+
+    &:hover {
+        border-color: lighten($color-primary, 10%);
+        color: $color-primary;
+        box-shadow: 3px 8px 8px -5px rgba(0,0,0,.3)
+    }
+
+    &:focus {
+        border-color: lighten($color-primary, 10%);
+        color: $color-primary;
+        box-shadow: 3px 8px 8px -5px rgba(0,0,0,.3)
+    }
+
+    &:active {
+        border-color: $color-primary;
+        color: $color-primary;
+        box-shadow: 4px 6px 6px -6px rgba(0,0,0,.5)
+    }
+
+    &.#{$btn-prefix}--loading {
+        opacity: 70%;
+        pointer-events: none;
+        &:hover {
+            box-shadow: none;
+        }
+        > .#{$prefix}-icon.icon-refresh {
+            animation: rotating 1.5s $btn-transition-fn infinite;
+        }
+    }
+
+    &.#{$btn-prefix}--disabled {
+        opacity: 70%;
+        pointer-events: none;
+        cursor: not-allowed;
+        &:hover {
+            box-shadow: none;
+        }
+    }
+
+    @each $name, $color in $btn-color {
+        &.#{$btn-prefix}--#{$name} {
+            background-color: lighten($color, 6%);
+            color: #F2F6FC;
+            border-color: $color;
+            &:active {
+                background-color: lighten($color, 1%);
+            }
+        }
+    }
+
+    @each $name, $size in $btn-sizes {
+        &.#{$prefix}-size--#{$name} {
+            height: #{$size}px;
+            padding: 0 #{$size / 2.25}px;
+            font-size: #{map-get($btn-font-sizes, $name)}
+        }
+    }
+}
+

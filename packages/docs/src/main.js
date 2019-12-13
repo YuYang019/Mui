@@ -1,17 +1,20 @@
-import 'prismjs/themes/prism-tomorrow.css'
-
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
-import Mui from '@akihi/mui'
+import Mui, { Button } from '../../mui/src'
 
 import store from './store'
 import App from './App.vue'
 import router from './router'
-import Demo from '@/components/Demo'
-import Page from '@/components/Page'
+import Demo from '@docs/components/Demo'
+import Page from '@docs/components/Page'
 
-import CN from '@/docs/zh-CN/messages'
-import EN from '@/docs/en-US/messages'
+import CN from '@docs/docs/zh-CN/messages'
+import EN from '@docs/docs/en-US/messages'
+
+// import '@docs/assets/paper.css'
+import '@docs/assets/prismjs/themes/prism.css'
+
+Vue.use(Button)
 
 Vue.component(Demo.name, Demo)
 Vue.component(Page.name, Page)
@@ -22,40 +25,17 @@ const messages = {
   'en-US': EN
 }
 
-console.log(Mui)
+Vue.use(Mui, { size: 'small' })
+Vue.use(VueI18n)
 
-if (process.env.NODE_ENV === 'development') {
-  import('../../mui/src/index').then(Mui => {
-    Vue.use(Mui.default)
-    Vue.use(VueI18n)
+const i18n = new VueI18n({
+  locale: store.state.locale,
+  messages
+})
 
-    const i18n = new VueI18n({
-      locale: store.state.locale,
-      messages
-    })
-
-    new Vue({
-      i18n,
-      router,
-      store,
-      render: h => h(App)
-    }).$mount('#app')
-  })
-} else {
-  import('@akihi/mui').then(Mui => {
-    Vue.use(Mui.default)
-    Vue.use(VueI18n)
-
-    const i18n = new VueI18n({
-      locale: store.state.locale,
-      messages
-    })
-
-    new Vue({
-      i18n,
-      router,
-      store,
-      render: h => h(App)
-    }).$mount('#app')
-  })
-}
+new Vue({
+  i18n,
+  router,
+  store,
+  render: h => h(App)
+}).$mount('#app')

@@ -5,7 +5,8 @@ module.exports = {
       {
         modules: false
       }
-    ]
+    ],
+    '@vue/babel-preset-jsx',
   ],
   // 针对不同的 NODE_ENV 配置不同的 preset
   env: {
@@ -17,7 +18,8 @@ module.exports = {
           {
             targets: { node: 'current' }
           }
-        ]
+        ],
+        '@vue/babel-preset-jsx',
       ]
     }
   }

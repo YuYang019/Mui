@@ -1,8 +1,18 @@
 $prefix: 'm';
 
-$body-font-family: 'Roboto', sans-serif !default;
+$body-font-family: 'ZCOOL XiaoWei', 'Roboto', sans-serif !default;
 $font-size-root: 16px !default;
 $line-height-root: 1.5 !default;
+
+$border-default: 2px solid #41403e !default;
+
+$color-white: #ffffff !default;
+$color-default: #fefefe !default;
+$color-primary:  #409EFF !default;
+$color-success:  #67C23A !default;
+$color-warning:  #E6A23C !default;
+$color-danger:  #F56C6C !default;
+$color-muted:  #909399 !default;
 
 $font-weights: (
   'thin': 100,
