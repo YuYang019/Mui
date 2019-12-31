@@ -16,7 +16,6 @@ class OverlayNode {
       this._order = val
 
       if (typeof this.onOrderChange === 'function') {
-        console.log('change')
         this.onOrderChange(val)
       }
     }
@@ -51,7 +50,6 @@ class OverlayManager {
   }
 
   reorder() {
-    console.log('reorder')
     this.nodes.forEach((node, i) => {
       node.order = this.baseOrder + i
     })

@@ -18,6 +18,10 @@ export default createComponent({
   },
 
   props: {
+    visible: {
+      type: Boolean,
+      default: false
+    },
     lazy: {
       type: Boolean,
       default: true
@@ -43,7 +47,6 @@ export default createComponent({
 
   data() {
     return {
-      renderFirst: this.value
     }
   },
 
@@ -86,13 +89,11 @@ export default createComponent({
     },
 
     handleClose(e) {
-      console.log('mask click')
       this.$emit('change', false)
     },
 
     mount() {
       const container = this.appendToBody ? document.body : this.$el.parentNode
-      console.log(container)
       container.append(this.$el)
     }
   },
@@ -112,7 +113,7 @@ export default createComponent({
 
   render() {
     const { lazy, shouldRender, visible, classes, slots, modal, color, title, handleClose, onMaskClick } = this
-
+    console.log('render')
     const Dialog = (
       <m-overlay
         visible={visible}
