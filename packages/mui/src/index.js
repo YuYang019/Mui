@@ -1,6 +1,7 @@
 import Button from './components/Button'
 import Input from './components/Input'
 import Icon from './components/Icon'
+import Dialog from './components/Dialog'
 
 console.warn(
   'You are using a whole package of mui, ' +
@@ -10,7 +11,8 @@ console.warn(
 const components = [
   // Button,
   Input,
-  Icon
+  Icon,
+  Dialog
 ]
 
 const install = (Vue, options = {}) => {
@@ -35,5 +37,6 @@ export default {
 export {
   Button,
   Input,
-  Icon
+  Icon,
+  Dialog
 }

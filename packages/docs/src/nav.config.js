@@ -17,6 +17,10 @@ const nav = [
       {
         name: 'input',
         path: '/input'
+      },
+      {
+        name: '对话框',
+        path: '/dialog'
       }
     ]
   }

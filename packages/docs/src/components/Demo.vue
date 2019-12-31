@@ -90,11 +90,10 @@ export default {
       padding: 30px;
       border-top: 1px solid #eee;
       .wrapper {
-        > div {
-          display: inline-block;
+        .m-button {
           margin: 0 15px;
         }
-        .m-button {
+        .m-input {
           margin: 0 15px;
         }
       }

@@ -56,20 +56,20 @@ $btn-prefix: '#{$prefix}-button';
     }
 
     &:hover {
-        border-color: lighten($color-primary, 10%);
-        color: $color-primary;
+        // border-color: lighten($color-primary, 10%);
+        // color: $color-primary;
         box-shadow: 3px 8px 8px -5px rgba(0,0,0,.3)
     }
 
-    &:focus {
-        border-color: lighten($color-primary, 10%);
-        color: $color-primary;
-        box-shadow: 3px 8px 8px -5px rgba(0,0,0,.3)
-    }
+    // &:focus {
+    //     border-color: lighten($color-primary, 10%);
+    //     color: $color-primary;
+    //     box-shadow: 3px 8px 8px -5px rgba(0,0,0,.3)
+    // }
 
     &:active {
-        border-color: $color-primary;
-        color: $color-primary;
+        // border-color: $color-primary;
+        // color: $color-primary;
         box-shadow: 4px 6px 6px -6px rgba(0,0,0,.5)
     }
 

@@ -1,7 +1,6 @@
-import Vue from 'vue'
 import { bemPrefix } from '../utils/create'
 
-export default Vue.extend({
+export default {
   props: {
     large: Boolean,
     small: Boolean,
@@ -29,4 +28,4 @@ export default Vue.extend({
       }
     }
   }
-})
+}

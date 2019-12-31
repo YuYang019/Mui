@@ -16,7 +16,8 @@ module.exports = {
     ],
     rules: {
       'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-      'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+      'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+      'space-before-function-paren': 'off',
     },
     // eslint不支持一些实验特性或者一些非标准语法 flow/ts-type
     // 所以需要使用这个 parser 在 lint 的时候转换一下代码

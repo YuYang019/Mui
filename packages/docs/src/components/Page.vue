@@ -25,6 +25,7 @@ export default {
   }
   > p {
     margin-bottom: 20px;
+    line-height: 25px;
   }
   h2 {
     &:before {
@@ -35,7 +36,9 @@ export default {
   }
   :not(pre) > code[class*='language-'],
   pre[class*='language-'] {
-    background: #282c34;
+    background: #f9f9f9;
+    color: #905;
+    text-shadow: none;
   }
   pre[class*='language-'] {
     margin: 16px 0;
@@ -51,15 +54,16 @@ export default {
       monospace !important;
   }
   :not(pre) > code {
-    color: #41403e;
+    color: #bd4147;
     padding: 0.25rem 0.5rem;
     margin: 0 3px;
-    background-color: #deefff;
+    background-color: #fbe5e1;
     border-radius: 3px;
   }
   table {
     border-collapse: collapse;
     line-height: 1.5;
+    width: 100%;
     thead {
       th {
         background: #eee;

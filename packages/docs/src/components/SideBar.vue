@@ -51,8 +51,10 @@ export default {
 
 <style lang="scss">
   .side-bar {
-    min-height: calc(100vh - 110px);
-    width: 300px;
+    box-sizing: border-box;
+    min-height: calc(100vh - 60px);
+    min-width: 250px;
+    width: 250px;
     background: #fff;
     border-right: 1px solid #ddd;
     padding: 30px;

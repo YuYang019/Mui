@@ -1,6 +1,4 @@
-import Vue from 'vue'
-
-export default Vue.extend({
+export default {
   methods: {
     slots (name = 'default', props) {
       const { $slots, $scopedSlots } = this
@@ -13,4 +11,4 @@ export default Vue.extend({
       return $slots[name]
     }
   }
-})
+}
