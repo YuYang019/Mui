@@ -74,8 +74,8 @@ $btn-prefix: '#{$prefix}-button';
     }
 
     &.#{$btn-prefix}--loading {
-        opacity: 70%;
         pointer-events: none;
+        opacity: 0.7;
         &:hover {
             box-shadow: none;
         }
