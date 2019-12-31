@@ -1,6 +1,6 @@
 #!/bin/bash
 
-folder = ".temp"
+folder="../.temp"
 
 if [ ! -d "$folder" ]; then
   exit 0
